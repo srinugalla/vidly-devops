@@ -24,7 +24,7 @@ jobs:
           run: sleep 10
 
         - name: Test file exists
-          run: grpep -i "dragon" dragon.txt  
+          run: grep -i "dragon" dragon.txt  
 
           
     deploy_job_3:
