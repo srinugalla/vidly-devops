@@ -4,16 +4,36 @@ on:
     push
 
 jobs:
-    ascii_job:
+    build_job_1:
         runs-on: ubuntu-latest
         steps:
-        - name: checkout Repo
-          uses: actions/checkout@v6
+        - name: install cowsay program
+          run: sudo apt-get install cowsay -y
 
-        - name: checkout Repo Files
-          run: ls -ltr  
+        - name: xecute cowsay CMD
+          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
-        - name: Executing in shell script
-          run: bash .github/workflows/ascii-script.sh
+        - name: Sleep for 30 seconds
+          run: sleep 30
 
+
+    test_job_2:
+        runs-on: ubuntu-latest
+        steps:
+        - name: sleep for 10 seconds
+          run: sleep 10
+
+        - name: Test file exists
+          run: grpep -i "dragon" dragon.txt  
+
+          
+    deploy_job_3:
+        runs-on: ubuntu-latest
+        steps:
+
+        - name: Read File
+          run: cat dragon.txt
+
+        - name: Deploy
+          run: echo Deploying ... ... ..
        
