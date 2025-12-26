@@ -14,6 +14,6 @@ jobs:
           run: ls -ltr  
 
         - name: Executing in shell script
-          run: ./ascii-script.sh
+          run: bash.github/workflows/ascii-script.sh
 
        
