@@ -1,0 +1,12 @@
+{
+    "name": "Sree docker course",
+    "price": 99,
+    "is Published": true,
+    "tags": ["software", "devops"],
+    "author": {
+        "firstName": "Sree",
+        "lastName": "G"
+    }
+
+
+}
