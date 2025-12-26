@@ -14,6 +14,6 @@ jobs:
           run: ls -ltr  
 
         - name: Executing in shell script
-          run: ./srinugalla/vidly-devops/.github/workflows/ascii-script.sh
+          run: ./ascii-script.sh
 
        
